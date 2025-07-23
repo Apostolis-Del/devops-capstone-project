@@ -1,7 +1,6 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  creationTimestamp: null
   labels:
     app: accounts
   name: accounts
@@ -10,15 +9,13 @@ spec:
   selector:
     matchLabels:
       app: accounts
-  strategy: {}
   template:
     metadata:
-      creationTimestamp: null
       labels:
         app: accounts
     spec:
       containers:
-      - image: us.icr.io/sn-labs-antelidimos/accounts:1
+      - image: IMAGE_NAME_HERE
         name: accounts
         resources: {}
         env:
@@ -39,4 +36,3 @@ spec:
               secretKeyRef:
                 name: postgresql
                 key: database-user
-status: {}
