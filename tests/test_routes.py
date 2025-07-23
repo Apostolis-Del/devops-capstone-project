@@ -28,7 +28,6 @@ HTTPS_ENVIRON = {'wsgi.url_scheme': 'https'}
 
 class TestAccountService(TestCase):
 
-
     """Account Service Tests"""
     def test_cors_headers(self):
         """It should return CORS headers"""
@@ -195,4 +194,3 @@ class TestAccountService(TestCase):
         }
         for key, value in headers.items():
             self.assertEqual(response.headers.get(key), value)
-
